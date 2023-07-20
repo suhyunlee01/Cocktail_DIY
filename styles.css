@@ -10,13 +10,12 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .container {
     width: 100%; 
-    max-width: 1440px; 
-    height: 2903px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -24,4 +23,62 @@ body, html {
     .container {
         width: 1440px; /* 화면 너비가 1441px 이상일 때, 너비를 1440px로 고정 */
     }
+}
+.mainpage_img_container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mainpage_img_container > img{
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%)
+}
+
+
+.mainpage_img_container_contents{
+    min-width: 1440px;
+    color: #FFF;
+    font-family: Pretendard;
+    position: absolute;
+    top: 35%;
+}
+.mainpage_img_container_contents_text_big{
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.mainpage_img_container_contents_text_small{
+    font-size: 18px;
+    font-weight: 200;
+    margin-bottom: 70px;
+    display: block;
+}
+.mainpage_img_container_contents_text_big span{
+    display: block;
+    margin-bottom: 4px;
+}
+.mainpage_img_container_contents_text_small span{
+    display: block;
+    margin-bottom: 6px;
+}
+.mainpage_img_container_contents_search{
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.39);
+    background: rgba(255, 255, 255, 0.39);
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+.mainpage_img_container_contents_search svg{
+    margin-right: 20px;
 }
