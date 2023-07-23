@@ -152,4 +152,78 @@ body, html {
 .popular_content{
     margin-right: 336px;
 }
+
+/*recipe page*/
+
+.background_pic img{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+.recipe_page_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 280px;
+}
+.recipe_page_header_container{
+    position: absolute;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.recipe_page_header_txt{
+    width: 100%;
+    margin-left: 24px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 290px;
+}
+.recipe_page_header_pic>img{
+    width: 280px;
+    height: 400px;
+    object-fit: cover;
+}
+.heart_svg{
+    margin-left: 900px;
+}
+.recipe_page_recipe_name{
+    display: block;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 700;
+}
+.recipe_page_Glass_to_use{
+    display: block;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.recipe_page_txt_header{
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 700;
+}
+.recipe_page_txt{
+    display: flex;
+    justify-content: space-between;
+}
+.recipe_page_txt_text{
+    margin-top: 40px;
+    width: 600px;
+    height: 390px; 
+    border-radius: 14px;
+    background-color: #E6F3EA;
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    
+}
+.recipe_page_txt_text ul{
+    margin-left: 24px;
 }
