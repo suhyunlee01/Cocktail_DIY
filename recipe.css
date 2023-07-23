@@ -1,0 +1,35 @@
+
+.recipe_img_container_component{
+    width: 285px;
+    height: 446px;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #fafafa;
+    margin-bottom: 60px;
+}
+.recipe_img_container_component_img{
+    width: 285px;
+    height: 301px;
+    object-fit: cover;
+}
+.recipe_img_container_component_text_container{
+    width: 285px;
+    height: 145px;
+    font-family: Poppins;
+}
+.recipe_text_box{
+    margin-left: 18px;
+}
+.recipe_name{
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.Glass_to_use{
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 8px;
+}

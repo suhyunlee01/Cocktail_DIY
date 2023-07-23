@@ -1,0 +1,11 @@
+.popular_content_component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.popular_content_component_img img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}

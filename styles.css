@@ -4,13 +4,17 @@
 
 /*@import url("다른파일.css");*/
 @import url("global_nav.css");
+@import url("recipe.css");
+@import url("tag.css");
+@import url("popular.css");
+@import url("footer.css");
+
 
 
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
 }
 
 .container {
@@ -26,7 +30,7 @@ body, html {
 }
 .mainpage_img_container{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -35,7 +39,8 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(60%)
+    filter: brightness(60%);
+    flex-shrink: 0;
 }
 
 
@@ -57,12 +62,10 @@ body, html {
     margin-bottom: 70px;
     display: block;
 }
-.mainpage_img_container_contents_text_big span{
-    display: block;
+.mainpage_img_container_contents_text_big div{
     margin-bottom: 4px;
 }
-.mainpage_img_container_contents_text_small span{
-    display: block;
+.mainpage_img_container_contents_text_small div{
     margin-bottom: 6px;
 }
 .mainpage_img_container_contents_search{
@@ -81,4 +84,72 @@ body, html {
 }
 .mainpage_img_container_contents_search svg{
     margin-right: 20px;
+}
+.recipe_header_text{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin-top: 160px;
+    margin-bottom: 60px;
+}
+.mainpage_Recipe_container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.see_more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.banner{
+    margin-top: 130px;
+    background-color: #E4FFEC;
+    width: 100%;
+    height: 205px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 140px;
+}
+.banner_content_txt{
+    margin-left: 100px;
+}
+.banner_content_txt :first-child{
+    display: block;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+.banner_content_txt :nth-child(2){
+    display: block;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.banner_content_img{
+    padding-bottom: 60px;
+}
+.banner_content_img img{
+    width: 517px;
+    height: 398px;
+    flex-shrink: 0;
+}
+.header_the_6_popular{
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 700;
+}
+.the_6_popular{
+    margin-top: 66px;
+    display: flex;
+    justify-content: start;
+}
+.popular_content{
+    margin-right: 336px;
+}
 }
