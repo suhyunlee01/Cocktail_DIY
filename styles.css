@@ -227,4 +227,18 @@ body, html {
 }
 .recipe_page_txt_text ul{
     margin-left: 24px;
+/*heartpage*/
+.heartpage_Recipe_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+.heart_header_text{
+    margin-top: 200px;
+    margin-bottom: 40px;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 700;
+}
+
 }
