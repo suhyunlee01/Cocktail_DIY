@@ -29,6 +29,144 @@ body, html {
         width: 1440px; /* 화면 너비가 1441px 이상일 때, 너비를 1440px로 고정 */
     }
 }
+
+/*modal*/
+#modalWrap {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.50);
+  }
+  #modalWrap > svg{
+    margin-bottom: 14px;
+  }
+  #modalBody {
+    font-family: Poppins;
+    width: 704px;
+    height: 723px;
+    padding: 55px 50px;
+    margin: 0 auto;
+    border-radius: 24px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.modalBody_signup_signin{
+    display: flex;
+    justify-content: center;
+}
+.modalBody_signup_signin div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 302px;
+    height: 56px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+.modalBody_signup{
+    background-color: #0D7D0B;
+}
+.modalBody_signin{
+    background-color: #CCC;
+}
+.modalBody_header_text{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.modalBody_header_text_or{
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.modalBody_google{
+    margin-bottom: 40px;
+    display: flex;
+    width: 454px;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #E4FFEC;
+}
+.modalBody_form{
+    font-size: 16px;
+    font-weight: 400;
+}
+.modalBody_form label{
+    display: block;
+}
+.modalBody_form_input{
+    width: 454px;
+    height: 56px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(102, 102, 102, 0.35);
+}
+.modalBody_form_submit{
+    margin-top: 40px;
+    display: block;
+    width: 454px;
+    height: 64px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #0D7D0B;
+    border-radius: 40px;
+    border: none ;
+}
+.modalBody_signup_signuppage{
+    background-color: #CCC;
+}
+.modalBody_signin_signuppage{
+    background-color: #0D7D0B;
+}
+
+.modalBody_profile_pic{
+    width: 342px;
+    height: 342px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 70px;
+}
+.modalBody_editprofile_submit{
+    margin-top: 16px;
+    display: block;
+    width: 454px;
+    height: 64px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #0D7D0B;
+    border-radius: 40px;
+    border: none ;
+}
+.modalBody_editprofile_submit_logout{
+    margin-top: 16px;
+    display: block;
+    width: 454px;
+    height: 64px;
+    color: #0D7D0B;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #E4FFEC;
+    border-radius: 40px;
+    border: none ;
+}
+
+  /*mainpage*/
 .mainpage_img_container{
     width: 100%;
     height: 100vh;
@@ -257,7 +395,7 @@ body, html {
     width: 561px;
     height: 561px;
     background: #E6F3EA;
-    padding-left: 100px;
+    padding-left: 100px; 
 }
 .quiz_container_form_h1{
     margin-bottom: 46px;
