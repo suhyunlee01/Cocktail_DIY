@@ -1,0 +1,16 @@
+.search_bar{
+    padding-left: 18px;
+    margin-top: 164px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 60px;
+    background-color: #E4FFEC;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Poppins;
+}
+.searcch_page_component_container{
+    margin-top: 64px;
+}
