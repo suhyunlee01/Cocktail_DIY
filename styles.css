@@ -241,4 +241,55 @@ body, html {
     font-weight: 700;
 }
 
+/*quiz page*/
+.quiz_container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quiz_container_form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 561px;
+    height: 561px;
+    background: #E6F3EA;
+    padding-left: 100px;
+}
+.quiz_container_form_h1{
+    margin-bottom: 46px;
+}
+.question_list{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-bottom: 36px;
+}
+.radio{
+    background-color: white;
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+}
+.answer{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+}
+.submit_btn{
+    margin-top: 14px;
+    color: white;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 22px;
+    border: none;
+    display: flex;
+    width: 454px;
+    height: 64px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D7D0B;
 }
