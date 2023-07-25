@@ -250,6 +250,13 @@ button{
     margin-top: 10px;
     margin-bottom: 60px;
 }
+.recipe_header_text_recipe_page{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Montserrat;
+    margin-top: 180px;
+    margin-bottom: 60px;
+}
 .mainpage_Recipe_container{
     margin-top: 66px;
     display: flex;
