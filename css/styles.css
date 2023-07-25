@@ -20,6 +20,7 @@ body, html {
 a{
     text-decoration: none;
     cursor:grab;
+    color: black;
 }
 a:visited{
     color: black;
