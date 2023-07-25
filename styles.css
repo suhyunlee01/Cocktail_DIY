@@ -17,7 +17,19 @@ body, html {
     padding: 0;
     width: 100%;
 }
-
+a{
+    text-decoration: none;
+    cursor:grab;
+}
+a:visited{
+    color: black;
+}
+input{
+    cursor:grab;
+}
+button{
+    cursor:grab;
+}
 .container {
     width: 100%; 
     max-width: 1440px;
@@ -167,6 +179,11 @@ body, html {
 }
 
   /*mainpage*/
+
+.scroll{
+    color: white;
+    margin-bottom: 90px;
+}
 .mainpage_img_container{
     width: 100%;
     height: 100vh;
@@ -179,7 +196,6 @@ body, html {
     height: 100%;
     object-fit: cover;
     filter: brightness(60%);
-    flex-shrink: 0;
 }
 
 
@@ -228,7 +244,7 @@ body, html {
     font-size: 30px;
     font-weight: 700;
     font-family: Montserrat;
-    margin-top: 160px;
+    margin-top: 80px;
     margin-bottom: 60px;
 }
 .mainpage_Recipe_container{
@@ -250,7 +266,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 140px;
+    margin-bottom: 110px;
 }
 .banner_content_txt{
     margin-left: 100px;
