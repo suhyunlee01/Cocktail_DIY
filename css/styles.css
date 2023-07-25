@@ -22,6 +22,9 @@ a{
     cursor:grab;
     color: black;
 }
+a:link {
+    color : black;
+  }
 a:visited{
     color: black;
 }
