@@ -184,10 +184,8 @@ button{
 
   /*mainpage*/
 
-.scroll a{
-    font-size: 0px;
-    color: white;
-    margin-bottom: 90px;
+.scroll{
+    height: 100px;
 }
 .mainpage_img_container{
     width: 100%;
@@ -249,13 +247,14 @@ button{
     font-size: 30px;
     font-weight: 700;
     font-family: Montserrat;
-    margin-top: 80px;
+    margin-top: 10px;
     margin-bottom: 60px;
 }
 .mainpage_Recipe_container{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+    margin-top: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .see_more{
     width: 100%;
