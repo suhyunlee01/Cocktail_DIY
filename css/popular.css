@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+.popular_content_component:hover{
+    transform: scale(1.1);
 }
 .popular_content_component_img img{
     width: 120px;

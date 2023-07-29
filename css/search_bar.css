@@ -11,6 +11,9 @@
     font-weight: 400;
     font-family: Poppins;
 }
+.search_bar:hover{
+    background-color: #c9e2d0;
+}
 .searcch_page_component_container{
     margin-top: 64px;
 }

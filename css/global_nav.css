@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .global_nav_container{
     display: flex;
@@ -28,6 +29,10 @@
     font-size: 34px;
     font-weight: 700;
     margin-right: 171px;
+    transition: transform 0.3s ease;
+}
+#logo:hover{
+    transform: scale(1.1);
 }
 .global_nav_container_content_textbtn{
     display: inline-flex;
@@ -40,6 +45,9 @@
     text-decoration: none;
     cursor:grab;
 }
+.global_nav_container_content_textbtn a:hover {
+    color: #0D7D0B;
+  }
 .global_nav_container_content_otherbtn{
     border: none;
     width: 231px;
@@ -48,6 +56,12 @@
     align-items: center;
     gap: 44px;
 }
+.global_nav_container_content_otherbtn a{
+    transition: transform 0.3s ease;
+}
+.global_nav_container_content_otherbtn a:hover {
+    transform: scale(1.1);
+  }
 #sign_in_btn{
     text-transform: uppercase;
     height: 30px;

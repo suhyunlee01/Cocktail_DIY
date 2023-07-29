@@ -200,8 +200,6 @@ button{
     object-fit: cover;
     filter: brightness(60%);
 }
-
-
 .mainpage_img_container_contents{
     min-width: 1440px;
     color: #FFF;
@@ -240,15 +238,33 @@ button{
     align-items: center;
     padding-left: 24px;
 }
+.mainpage_img_container_contents_search:hover{
+    background-color: rgba(255, 255, 255, 0.658);
+}
 .mainpage_img_container_contents_search svg{
     margin-right: 20px;
 }
 .recipe_header_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 30px;
     font-weight: 700;
     font-family: Montserrat;
     margin-top: 10px;
     margin-bottom: 60px;
+}
+.recipe_header_text_Cocktails{
+    font-size: 30px;
+    font-weight: 700;
+}
+.recipe_header_text_SeeAll{
+    font-size: 16px;
+    font-weight: 600;
+    color: #a5a5a5;
+}
+.recipe_header_text_SeeAll:hover{
+    color: #0D7D0B;
 }
 .recipe_header_text_recipe_page{
     font-size: 30px;
@@ -268,6 +284,11 @@ button{
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    transition: transform 0.3s ease;
+}
+.see_more:hover{
+    transform: scale(1.2);
+    cursor: grab;
 }
 .banner{
     margin-top: 130px;
@@ -458,4 +479,7 @@ button{
     justify-content: center;
     align-items: center;
     background-color: #0D7D0B;
+}
+.submit_btn:hover{
+    background-color: #0b630a;
 }

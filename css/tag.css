@@ -7,3 +7,6 @@
     margin-right: 12px;
     border-radius: 100px;
 }
+.tag:hover{
+    background-color: #c9e2d0;
+}
