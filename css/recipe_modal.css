@@ -20,12 +20,12 @@
 .recipe_modal{
     background-color: white;
     border-radius: 20px;
-    width: 1108px;
-    height: 680px;
+    width: 1100px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 80px 60px 80px;
+    padding: 50px 90px 50px 90px;
 
 }
 .recipe_modal_header{
@@ -44,8 +44,9 @@
 }
 .recipe_modal_header_cont img{
     background-color: antiquewhite;
-    width: 200px;
-    height: 257px;
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
 }
 .recipe_modal_header_txt{
     margin-left: 43px;
@@ -56,12 +57,20 @@
     font-weight: 700;
 }
 .recipe_modal_body_text{
+    padding-left: 14px;
+    padding-right: 20px;
     margin-top: 20px;
-    width: 465px;
-    height: 270px;
+    width: 450px;
+    height: 294px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    border-radius: 18px;
+    border-radius: 19px;
     background-color: #E4FFEC;
+    font-size: 20px;
+    font-family: Poppins;
+}
+
+.recipe_img_container_component{
+    cursor: grab;
 }
