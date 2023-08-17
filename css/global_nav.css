@@ -62,11 +62,11 @@
 .global_nav_container_content_otherbtn a:hover {
     transform: scale(1.1);
   }
-#sign_in_btn{
-    text-transform: uppercase;
-    height: 30px;
-    width: 86px;
-    border-radius: 7px;
-    background-color: #0D7D0B;
-    color: white;
+.sign_in{
+   border: none;
+   background-color: white;
+   transition: transform 0.3s ease;
+}
+.sign_in:hover{
+    transform: scale(1.1);
 }
