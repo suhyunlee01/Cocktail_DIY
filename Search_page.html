@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 <body>
     <nav id="global_nav">
@@ -27,7 +28,6 @@
                         <path d="M8.66671 4.09711C5.44554 4.09711 2.83337 6.68244 2.83337 9.87211C2.83337 12.4469 3.85421 18.5579 13.9027 24.7354C14.0827 24.845 14.2893 24.9029 14.5 24.9029C14.7107 24.9029 14.9174 24.845 15.0974 24.7354C25.1459 18.5579 26.1667 12.4469 26.1667 9.87211C26.1667 6.68244 23.5545 4.09711 20.3334 4.09711C17.1122 4.09711 14.5 7.59711 14.5 7.59711C14.5 7.59711 11.8879 4.09711 8.66671 4.09711Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                                               
                 </a>
-                <a href="edit_profile_page.html">
                 <button class="sign_in">
                     <svg width="86" height="31" viewBox="0 0 86 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect y="0.5" width="86" height="30" rx="7" fill="#0D7D0B"/>
@@ -77,33 +77,100 @@
         </form>
         <div class="recipe_img_container_component_text_container_tag">
             <span class="tag">
-                category
+                search
             </span>
             <span class="tag">
-                Type
+                search
             </span>
         </div>
-        <div class="searcch_page_component_container">
-            <div class="recipe_img_container_component">
-                <img class="recipe_img_container_component_img" src="./img/mojitoImg.jpg"/>
-                <div class="recipe_img_container_component_text_container">
-                    <div class="recipe_text_box">
-                        <span class="recipe_name">Mojito</span>
-                        <span class="Glass_to_use">Glass to use</span>
-                        <div class="recipe_img_container_component_text_container_tag">
-                            <span class="tag">
-                                category
-                            </span>
-                            <span class="tag">
-                                Type
-                            </span>
+        <div id="result_contain_box">
+            <div id="result0">
+                <!-- <div class="searcch_page_component_container">
+                    <div class="recipe_img_container_component">
+                        <img class="recipe_img_container_component_img"/>
+                        <div class="recipe_img_container_component_text_container">
+                            <div class="recipe_text_box">
+                                <span class="recipe_name">Mojito</span>
+                                <span class="Glass_to_use">Glass to use</span>
+                                <div class="recipe_img_container_component_text_container_tag">
+                                    <span class="tag tag1">
+                                        category
+                                    </span>
+                                    <span class="tag tag2">
+                                        Type
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+            </div>
+            <div id="result1">
+                <!-- <div class="searcch_page_component_container">
+                    <div class="recipe_img_container_component">
+                        <img class="recipe_img_container_component_img"/>
+                        <div class="recipe_img_container_component_text_container">
+                            <div class="recipe_text_box">
+                                <span class="recipe_name">Mojito</span>
+                                <span class="Glass_to_use">Glass to use</span>
+                                <div class="recipe_img_container_component_text_container_tag">
+                                    <span class="tag tag1">
+                                        category
+                                    </span>
+                                    <span class="tag tag2">
+                                        Type
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div id="result2">
+                <!-- <div class="searcch_page_component_container">
+                    <div class="recipe_img_container_component">
+                        <img class="recipe_img_container_component_img"/>
+                        <div class="recipe_img_container_component_text_container">
+                            <div class="recipe_text_box">
+                                <span class="recipe_name">Mojito</span>
+                                <span class="Glass_to_use">Glass to use</span>
+                                <div class="recipe_img_container_component_text_container_tag">
+                                    <span class="tag tag1">
+                                        category
+                                    </span>
+                                    <span class="tag tag2">
+                                        Type
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div id="result3">
+                <!-- <div class="searcch_page_component_container">
+                    <div class="recipe_img_container_component">
+                        <img class="recipe_img_container_component_img"/>
+                        <div class="recipe_img_container_component_text_container">
+                            <div class="recipe_text_box">
+                                <span class="recipe_name">Mojito</span>
+                                <span class="Glass_to_use">Glass to use</span>
+                                <div class="recipe_img_container_component_text_container_tag">
+                                    <span class="tag tag1">
+                                        category
+                                    </span>
+                                    <span class="tag tag2">
+                                        Type
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer footer_search">
         <div class="footer_content">
             <div class="footer_content_left">
                 <span>Cocktail DIY</span>
@@ -119,6 +186,7 @@
             <hr/>
         </div>
     </div>
+    <script src="script.js"></script>
     <script src="modal.js"></script>
 </body>
 </html>
