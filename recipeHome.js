@@ -43,3 +43,14 @@ fetch(url).then((response)=>response.json()).then((data)=>{
                 </a>`
     }
 })
+
+
+function RecipeModalHandler(){
+    RecipeModal.style.display = "flex";
+}
+
+Close.addEventListener("click",CloseEventHandler);
+
+function CloseEventHandler(){
+    RecipeModal.style.display = "none";
+}
