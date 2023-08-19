@@ -1,6 +1,8 @@
+let url = "https://thecocktaildb.com/api/json/v1/1/search.php?s=";
 let searchBtn = document.getElementById("user-input-submit");
 let resultContainer = document.getElementById("result_contain_box");
 let RecipeModal = document.querySelector(".recipe_modal_wrap");
+
 
 let result =[];
 for(let number of "0123"){
@@ -19,7 +21,6 @@ function CloseEventHandler(){
 
 
 let component = document.querySelector(".searcch_page_component_container");
-let url = "https://thecocktaildb.com/api/json/v1/1/search.php?s=";
 let searchInput = document.getElementById("search_bar");
 
 
