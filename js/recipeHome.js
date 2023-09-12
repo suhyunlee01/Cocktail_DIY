@@ -11,7 +11,7 @@ let getModalRamdom = () => {
         console.log(randomData.drinks[0].strDrink);
         let randomDrink = randomData.drinks[0];
         RandomRecipeModal.innerHTML = `
-        <h2 class="recipe_modal_header_txt" style="color:white;">🍸 추천 칵테일, 가끔은 색다른 칵테일을 즐겨보세요!🍸              X</h2>
+        <h2 class="recipe_modal_header_txt" style="color:white; cursor:grab;">🍸 추천 칵테일, 가끔은 색다른 칵테일을 즐겨보세요!🍸              X</h2>
         <div class="recipe_modal">
                         <div class="recipe_modal_header">
                             <div class="recipe_modal_header_cont">
@@ -66,16 +66,16 @@ let getModalRamdom = () => {
 
 
 window.addEventListener("load", getModalRamdom);
-RandomRecipeModal.addEventListener("click",CloseRandomHandler);
-function CloseRandomHandler(){
-    RandomRecipeModal.style.display = "none";
-}
 
+//랜덤 레시피 모달 닫기 이벤트
+document.addEventListener("click", function(event) {
+    // 클릭된 엘리먼트가 "close_recipe_modal" 클래스를 가진 요소인지 확인
+    if (event.target.classList.contains("recipe_modal_header_txt")) {
+        // close_recipe_modal을 클릭한 경우, 원하는 동작을 수행
+        RandomRecipeModal.style.display = "none";
+    }
+});
 
-RecipeModal.addEventListener("click",CloseEventHandler);
-function CloseEventHandler(){
-    RecipeModal.style.display = "none";
-}
 
 
 let ingredients = [];
@@ -134,6 +134,9 @@ for(let number of "01234567"){
                     RecipeModal.style.display = "flex";
                     //resu[0~7]클릭 이벤트 발생 시 각 data.drinks[number] 데이터를 토대로 recipe modal의 html 생성
                     RecipeModal.innerHTML = ` 
+                    <svg class="close_recipe_modal" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                         <path d="M37.5 22.5L22.5 37.5M22.5 22.5L37.5 37.5M55 30C55 43.8071 43.8071 55 30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30Z" stroke="white" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <div class="recipe_modal">
                         <div class="recipe_modal_header">
                             <div class="recipe_modal_header_cont">
@@ -189,3 +192,12 @@ for(let number of "01234567"){
             }
 
 })
+
+//레시피 모달 닫기 이벤트
+document.addEventListener("click", function(event) {
+    // 클릭된 엘리먼트가 "close_recipe_modal" 클래스를 가진 요소인지 확인
+    if (event.target.classList.contains("close_recipe_modal")) {
+        // close_recipe_modal을 클릭한 경우, 원하는 동작을 수행
+        RecipeModal.style.display = "none";
+    }
+});

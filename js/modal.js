@@ -11,10 +11,6 @@ function modalHandler(){
 }
 signinbtn.addEventListener("click", modalHandler);
 
-function closeModalHandler(){
-    modalWrap.style.display="none";
-}
-closeModal.addEventListener("click", closeModalHandler);
 
 function singUpModal(){
     modaltext.innerHTML="Sign Up"

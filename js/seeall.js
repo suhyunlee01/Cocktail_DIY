@@ -10,10 +10,7 @@ for(let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
         RecipeModal.style.display = "flex";
     })
 }
-RecipeModal.addEventListener("click",CloseEventHandler);
-function CloseEventHandler(){
-    RecipeModal.style.display = "none";
-}
+
 window.addEventListener("load", function(){alphabet="a"; fetching(alphabet); reset();});
 
 
@@ -92,8 +89,8 @@ function fetching(alphabet){
             res[number].addEventListener("click", function(){
                 RecipeModal.innerHTML = `
                 <svg class="close_recipe_modal" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                    <path d="M37.5 22.5L22.5 37.5M22.5 22.5L37.5 37.5M55 30C55 43.8071 43.8071 55 30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30Z" stroke="white" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+                         <path d="M37.5 22.5L22.5 37.5M22.5 22.5L37.5 37.5M55 30C55 43.8071 43.8071 55 30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30Z" stroke="white" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
                 <div class="recipe_modal">
                     <div class="recipe_modal_header">
                         <div class="recipe_modal_header_cont">
@@ -177,3 +174,13 @@ function reset() {
         res[j].innerHTML = " ";
     }
 }
+
+
+
+document.addEventListener("click", function(event) {
+    // 클릭된 엘리먼트가 "close_recipe_modal" 클래스를 가진 요소인지 확인
+    if (event.target.classList.contains("close_recipe_modal")) {
+        // close_recipe_modal을 클릭한 경우, 원하는 동작을 수행
+        RecipeModal.style.display = "none";
+    }
+});

@@ -293,6 +293,8 @@ button{
     transform: scale(1.2);
     cursor: grab;
 }
+
+/*index page - banner*/
 .banner{
     margin-top: 130px;
     background-color: #E4FFEC;
@@ -324,7 +326,8 @@ button{
 .banner_content_img{
     padding-bottom: 60px;
 }
-.banner_content_img img{
+.banner_content_img_src{
+    opacity: 0;
     width: 517px;
     height: 398px;
     flex-shrink: 0;
