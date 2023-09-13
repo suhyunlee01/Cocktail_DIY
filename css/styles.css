@@ -327,6 +327,7 @@ button{
     padding-bottom: 60px;
 }
 .banner_content_img_src{
+    transition: opacity 0.5s ease; /* fade in 효과 주기위한 트랜지션임 */
     opacity: 0;
     width: 517px;
     height: 398px;
