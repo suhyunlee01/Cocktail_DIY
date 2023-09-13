@@ -66,32 +66,7 @@ function generateRandomModal(randomDrink){
                         </div>
                     </div>
                 </div>`;
-        //ingredient null값 제거하고 html 할당하는 함수 호출
-        generateingredient(randomDrink);
-    }
-
-    
-//ingredient null값 제거하고 html 할당하는 함수
-function generateingredient(randomDrink) {
-    console.log("Data in generateingredient:", randomDrink);
-
-    let ingredientsList = "";
-
-    for (let i = 1; i <= 15; i++) {
-        const ingredient = randomDrink[`strIngredient${i}`];
-        const measure = randomDrink[`strMeasure${i}`];
-
-        //ingredient랑 measure이 null 아닐 때
-        if (ingredient && measure) {
-            ingredientsList += `<li>${ingredient} ${measure}</li>`;
-        } else {
-            break; // 재료나 양이 없을 경우 반복문 종료
-        }
-    }
-
-    document.querySelector(".ingredients").innerHTML = ingredientsList;
 }
-
 
 
 //윈도우 로드 시 이벤트 핸들러
