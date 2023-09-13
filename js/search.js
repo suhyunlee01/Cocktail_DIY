@@ -49,6 +49,7 @@ let getresult = () => {
 
 //클릭 이벤트 발생 시 모달창 프린트 함수
 function generateModalHandler(data, number){
+    const thisDrink = data.drinks[number]
     //resu [0~7]까지의 클릭 이벤트
     RecipeModal.style.display = "flex";
     
@@ -60,17 +61,17 @@ function generateModalHandler(data, number){
         <div class="recipe_modal">
             <div class="recipe_modal_header">
                 <div class="recipe_modal_header_cont">
-                    <img src="${data.drinks[number].strDrinkThumb}"/>
+                    <img src="${thisDrink.strDrinkThumb}"/>
                     <div class="recipe_modal_header_txt">
                         <div class="recipe_text_box">
-                            <span class="recipe_page_recipe_name">${data.drinks[number].strDrink}</span>
-                            <span class="recipe_page_Glass_to_use">${data.drinks[number].strGlass}</span>
+                            <span class="recipe_page_recipe_name">${thisDrink.strDrink}</span>
+                            <span class="recipe_page_Glass_to_use">${thisDrink.strGlass}</span>
                             <div class="recipe_img_container_component_text_container_tag">
                                 <span class="tag">
-                                ${data.drinks[number].strIngredient1}
+                                ${thisDrink.strIngredient1}
                                 </span>
                                 <span class="tag">
-                                ${data.drinks[number].strIngredient2}
+                                ${thisDrink.strIngredient2}
                                 </span>
                             </div>
                         </div>
@@ -88,11 +89,6 @@ function generateModalHandler(data, number){
                     <span class="recipe_modal_body_header">Ingredient</span>
                     <div class="recipe_modal_body_text">
                         <ul class="ingredients">
-                        <li>${data.drinks[number].strIngredient1}${data.drinks[number].strMeasure1}</li>
-                        <li>${data.drinks[number].strIngredient2}${data.drinks[number].strMeasure2}</li>
-                        <li>${data.drinks[number].strIngredient3}${data.drinks[number].strMeasure3}</li>
-                        <li>${data.drinks[number].strIngredient4}${data.drinks[number].strMeasure4}</li>
-
                         </ul>
                     </div>
                 </div>
@@ -101,15 +97,38 @@ function generateModalHandler(data, number){
                     <div class="recipe_modal_body_text">
                         <ul>
                             <li>
-                                ${data.drinks[number].strInstructions}
+                                ${thisDrink.strInstructions}
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>`;
+
+        //ingredient null값 제거하고 html 할당하는 함수 호출
+        generateingredient(thisDrink);
 }
 
+//ingredient null값 제거하고 html 할당하는 함수
+function generateingredient(thisDrink) {
+    console.log("Data in generateingredient:", thisDrink);
+
+    let ingredientsList = "";
+
+    for (let i = 1; i <= 15; i++) {
+        const ingredient = thisDrink[`strIngredient${i}`];
+        const measure = thisDrink[`strMeasure${i}`];
+
+        //ingredient랑 measure이 null 아닐 때
+        if (ingredient && measure) {
+            ingredientsList += `<li>${ingredient} ${measure}</li>`;
+        } else {
+            break; // 재료나 양이 없을 경우 반복문 종료
+        }
+    }
+
+    document.querySelector(".ingredients").innerHTML = ingredientsList;
+}
 
 //result 4개
 function generateInnerHtml(drinksName){

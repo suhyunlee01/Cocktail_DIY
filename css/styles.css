@@ -247,6 +247,7 @@ button{
 .mainpage_img_container_contents_search svg{
     margin-right: 20px;
 }
+
 .recipe_header_text{
     display: flex;
     justify-content: space-between;
@@ -293,7 +294,12 @@ button{
     transform: scale(1.2);
     cursor: grab;
 }
-
+.HOME_DIY_header_text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /*index page - banner*/
 .banner{
     margin-top: 130px;
@@ -339,7 +345,6 @@ button{
     font-weight: 700;
 }
 .the_6_popular{
-    margin-top: 66px;
     display: flex;
     justify-content: start;
 }
