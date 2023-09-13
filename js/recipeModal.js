@@ -1,29 +1,10 @@
 let url = "https://thecocktaildb.com/api/json/v1/1/search.php?f=a"
 let RecipeModal = document.querySelector(".recipe_modal_wrap");
 
-// let MainpageRecipe1 = document.querySelector(".mainpage_Recipe_container1");
-// let MainpageRecipe2 = document.querySelector(".mainpage_Recipe_container2");
-// let MainpageRecipe = [];
-// for(let number of "12"){
-//     MainpageRecipe[number] = document.querySelector(".mainpage_Recipe_container"+number);
-// }
-
 
 fetch(url).then((response)=>response.json()).then((data)=>{
     console.log(data.drinks[0]);
-    let Cocktail = data.drinks[0];
     let drink = data.drinks;
-
-
-    let ingredients=[];
-    for(let i in Cocktail){
-        let ingredient="";
-        if(i.startsWith("strIngredient")&&Cocktail[i]){ //i가 "strIngredient"로 시작하고 Cocktail에 있다는 조건 하에 실행 // 즉, i가 "strIngredient"으로 시작하고, Cocktail["strIngredient1"], Cocktail["strIngredient2"]... 가 true인지 묻는 것
-            ingredient = Cocktail[i]; //Cocktail[strIngredient1], Cocktail[strIngredient2], Cocktail[strIngredient3]...
-            ingredients.push(`<li>${ingredient}</li>`);
-        }
-    }
-
 
     if(drink[0]){
         RecipeModal.innerHTML = `
@@ -90,8 +71,10 @@ function RecipeModalHandler(){
     RecipeModal.style.display = "flex";
 }
 
-RecipeModal.addEventListener("click",CloseEventHandler);
 
 function CloseEventHandler(){
     RecipeModal.style.display = "none";
 }
+
+
+RecipeModal.addEventListener("click",CloseEventHandler);

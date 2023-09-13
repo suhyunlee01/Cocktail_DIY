@@ -9,7 +9,6 @@ let modalSubmit = document.querySelector(".modalBody_form_submit");
 function modalHandler(){
     modalWrap.style.display="flex";
 }
-signinbtn.addEventListener("click", modalHandler);
 
 
 function singUpModal(){
@@ -18,7 +17,6 @@ function singUpModal(){
     goSignIn.style.backgroundColor = "#CCC";
     modalSubmit.value = "Sign Up";
 }
-goSignUP.addEventListener("click",singUpModal);
 
 function singInModal(){
     modaltext.innerHTML="Sign In"
@@ -26,4 +24,12 @@ function singInModal(){
     goSignUP.style.backgroundColor = "#CCC";
     modalSubmit.value = "Sign In";
 }
+
+function closeModalHandler(){
+    modalWrap.style.display="none";
+}
+
+closeModal.addEventListener("click", closeModalHandler);
+goSignUP.addEventListener("click",singUpModal);
 goSignIn.addEventListener("click",singInModal);
+signinbtn.addEventListener("click", modalHandler);
