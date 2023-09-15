@@ -1,7 +1,5 @@
 const picArea = document.querySelector(".getPic");
 const picImg = document.createElement("img");
-const picAreaFile = document.querySelector(".getPic_file");
-const picAreaText = document.querySelector(".getPic_txt");
 const reader = new FileReader(); //파일리더 객체
 
 //드래그 앤 드롭
@@ -19,9 +17,9 @@ picArea.ondrop = function(event){
     if(file){
         reader.onload = function(e){
             picImg.src = e.target.result;
+
+            picArea.innerHTML = ""; //새 이미지 추가 시 기존 이미지 제거
             picArea.appendChild(picImg);
-            picAreaText.style.display = "none";
-            picAreaFile.style.display = "none";
         }
 
         //파일리더 객체를 통해 readAsDataURL 메소드 호출
@@ -31,4 +29,4 @@ picArea.ondrop = function(event){
     }
 }
 
-export{reader, picArea, picImg};
+export{picArea, picImg};

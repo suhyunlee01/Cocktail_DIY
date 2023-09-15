@@ -16,6 +16,7 @@
     transition: transform 0.3s ease;
 }
 .getPic{
+    cursor: grab;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,4 +25,9 @@
     width: 285px;
     height: 285px;
     background-color: #ffffff;
+}
+.getPic>img{
+    width: 285px;
+    height: 285px;
+    object-fit: cover;
 }

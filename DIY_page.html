@@ -76,12 +76,12 @@
                 <div class="Diy_container_comp">
                     <div class="getPic">
                         <span class="getPic_txt">사진을 끌어다 놓아보세요</span>
-                        <input class="getPic_file" type="file" accept="image/*" />
+                        <input type="file" id="getPic_file" style="display: none;" accept="image/*">
                     </div>
                     <div class="getText">
                         <div class="getText_result"></div>
                         <form>
-                            <input class="DIY_input" type="text">
+                            <input class="DIY_input" type="text" maxlength="100" minlength="1">
                             <button>저장</button>
                         </form>
                     </div>
@@ -91,8 +91,8 @@
         
     </div>
     <script src="js/modal.js"></script>
-    <script src="js/diyDragDrop.js"></script>
-    <script src="js/diyFileSelect.js"></script>
+    <script type="module" src="js/diyDragDrop.js"></script>
+    <script type="module" src="js/diyFileSelect.js"></script>
 
     <div class="footer">
         <div class="footer_content">
