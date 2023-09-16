@@ -60,10 +60,10 @@
                 <div class="modalBody_header_text_or">OR</div>
                 <form class="modalBody_form">
                     <label>Email address</label>
-                    <input class="modalBody_form_input" type="email" minlength="4" maxlength="28" required />
+                    <input class="modalBody_form_input input_email" type="email" minlength="4" maxlength="30" required />
                     <label>Password</label>
-                    <input class="modalBody_form_input" type="password" minlength="4" maxlength="1" required/>
-                    <input class="modalBody_form_submit" type="submit" value="Sign In"/>
+                    <input class="modalBody_form_input input_pw" type="password" minlength="2" maxlength="10" required/>
+                    <button class="modalBody_form_submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -71,21 +71,31 @@
 
     <div class="container">
         <div class="diy_container">
-            <div class="heart_header_text">My DIY List</div>
             <div class="Diy_recipe_container">
+                <p class="diy_header_text">Upload My Recipes</p>
                 <div class="Diy_container_comp">
                     <div class="getPic">
-                        <span class="getPic_txt">사진을 끌어다 놓아보세요</span>
+                        <span class="getPic_txt">Upload Image</span>
+                        <span class="getPic_txt2">Click Here</span>
                         <input type="file" id="getPic_file" style="display: none;" accept="image/*">
                     </div>
                     <div class="getText">
-                        <div class="getText_result"></div>
-                        <form>
-                            <input class="DIY_input" type="text" maxlength="100" minlength="1">
-                            <button>저장</button>
+                        <form class="form_DIY">
+                            <textarea placeholder="Enter Recipe." class="DIY_input" maxlength="500" minlength="1" required></textarea>
+                            <button id="Btn_DIY_Save">Upload</button>
                         </form>
                     </div>
                 </div>
+                <svg class="downBtn" width="50" height="22" viewBox="0 0 50 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L25 21L49 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+        </div>
+
+        <div class="saved_diy_container">
+            <div class="Diy_recipe_save_zone">
+                <p class="diy_header_text_saved">My DIY List</p>
             </div>
         </div>
         
@@ -93,6 +103,7 @@
     <script src="js/modal.js"></script>
     <script type="module" src="js/diyDragDrop.js"></script>
     <script type="module" src="js/diyFileSelect.js"></script>
+    <script src="js/diyComp.js"></script>
 
     <div class="footer">
         <div class="footer_content">

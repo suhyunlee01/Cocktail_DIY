@@ -1,33 +1,211 @@
 .Diy_recipe_container{
-    margin-top: 20px;
+    margin-top: 130px;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 32px;
+}
+.diy_header_text{
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 700;
 }
 .Diy_container_comp{
     padding: 10px;
-    width: 285px;
-    height: 446px;
+    width: 780px;
+    height: auto;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    background-color: #d7ffe3;
-    margin-bottom: 60px;
+    background-color: #e8ffef;
     transition: transform 0.3s ease;
+    font-family: Poppins;
 }
 .getPic{
+    padding: 10px;
     cursor: grab;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 285px;
-    height: 285px;
+    width: 756px;
+    height: 350px;
     background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 2px #cdffdc;
+}
+.getPic_txt{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.getPic_txt2{
+    font-size: 12px;
+    color: rgb(141, 141, 141);
 }
 .getPic>img{
-    width: 285px;
-    height: 285px;
-    object-fit: cover;
+    width: 780px;
+    height: 350px;
+    object-fit: scale-down;
+    border-radius: 5px;
+}
+.form_DIY{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 780px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.DIY_input{
+    font-family: Poppins;
+    width: 100%;
+    height: 213px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 2px #cdffdc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    background-color: white;
+}
+#Btn_DIY_Save{
+    margin-top: 10px;
+    font-family: Poppins;
+    font-size: 16px;
+    width: 100%;
+    height: 35px;
+    background-color: #45bb69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.downBtn{
+    animation: moveUpDown 1s ease infinite;
+    margin-top: 40px;
+}
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* 위로 10px 이동 */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/**/
+.saved_diy_container{
+    margin-top: 300px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.Diy_recipe_save_zone{
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #72da91;
+    border-radius: 20px;
+}
+.diy_header_text_saved{
+    font-family: Montserrat;
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 83px;
+    margin-top: 40px;
+}
+.Diy_container_comp_saved{
+    margin-bottom: 100px;
+    padding: 10px;
+    width: 780px;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e8ffef;
+    transition: transform 0.3s ease;
+    font-family: Poppins;
+}
+.getPic_saved{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 756px;
+    height: 350px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 2px #cdffdc;
+}
+
+.form_DIY_saved{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 780px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.DIY_input_saved{
+    margin-top: 10px;
+    font-family: Poppins;
+    width: 100%;
+    height: 213px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 2px #cdffdc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    background-color: white;
+}
+#Btn_DIY_Save_saved{
+    margin-top: 10px;
+    font-family: Poppins;
+    font-size: 16px;
+    width: 100%;
+    height: 35px;
+    background-color: #45bb69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#Btn_DIY_delete{
+    font-family: Poppins;
+    border: none;
+    background-color: white;
+    color: #45bb69;
+    margin-bottom: 10px;
+}
+#Btn_DIY_delete:hover{
+    background-color: #cdffdc;
+}
+
+#Btn_DIY_Save_saved:hover{
+    background-color: #33a355;
+}
+#Btn_DIY_Save:hover{
+    background-color: #33a355;
+}
+.getPic:hover{
+    background-color: #cdffdc;
 }
