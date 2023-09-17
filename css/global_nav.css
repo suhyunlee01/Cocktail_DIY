@@ -70,3 +70,16 @@
 .sign_in:hover{
     transform: scale(1.1);
 }
+.profile{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6px;
+}
+.profile:hover{
+    transform: scale(1.1);
+}

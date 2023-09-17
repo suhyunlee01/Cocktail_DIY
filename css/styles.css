@@ -48,6 +48,31 @@ button{
 }
 
 /*modal*/
+.profileModalWrap{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+#modalBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 600px;
+    height: 800px;
+    padding-bottom: 20px;
+}
 .modalWrap {
     display: none;
     position: fixed;
@@ -62,11 +87,11 @@ button{
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.50);
   }
-  .close_modal{
+.close_modal{
     margin-bottom: 14px;
     cursor: grab;
-  }
-  .modalBody {
+}
+.modalBody {
     font-family: Poppins;
     padding: 55px 60px;
     margin: 0 auto;
@@ -76,7 +101,7 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+}
 .modalBody_signup_signin{
     display: flex;
     justify-content: center;
@@ -161,6 +186,7 @@ button{
     margin-bottom: 70px;
 }
 .modalBody_editprofile_submit{
+    font-family: Poppins;
     margin-top: 16px;
     display: block;
     width: 454px;
@@ -173,6 +199,7 @@ button{
     border: none ;
 }
 .modalBody_editprofile_submit_logout{
+    font-family: Poppins;
     margin-top: 16px;
     display: block;
     width: 454px;
@@ -184,7 +211,6 @@ button{
     border-radius: 40px;
     border: none ;
 }
-
   /*mainpage*/
 
 .scroll{
@@ -507,3 +533,6 @@ button{
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.50);
 }
+.heart_svg:hover{
+    cursor: grab;
+} 

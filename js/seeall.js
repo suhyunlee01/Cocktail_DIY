@@ -157,12 +157,18 @@ function reset() {
 }
 
 
-//윈도우 처음 로드 시 알파벳 a 먼저 보여주기
+//윈도우 처음 로드 시 알파벳 a 리스트 먼저 보여주기
 window.addEventListener("load", function(){alphabet="a"; fetching(alphabet); reset();});
 
 //모달창 닫기
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("close_recipe_modal")) {
         RecipeModal.style.display = "none";
+    }
+});
+
+RecipeModal.addEventListener("click", function(event) {
+    if (event.target.classList.contains("heart_svg")) {
+        alert("hes");
     }
 });

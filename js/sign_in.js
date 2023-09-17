@@ -1,11 +1,26 @@
-const id = document.querySelector(".input_email");
-const pw = document.querySelector(".input_pw");
+const ID = document.querySelector(".input_id");
+const PW = document.querySelector(".input_pw");
 const btnSubmit = document.querySelector(".modalBody_form_submit");
+const btnSignIn = document.querySelector(".sign_in");
+const btnProfile = document.querySelector(".profile");
+
+
+//우선 아이디 user 비번 1234로 통일
 
 btnSubmit.addEventListener("click", () =>{
-    if(id.value === "leesuhyun05505@gmail.com" && pw.value === 1234){
-        console.log("login");
-    }else{
-        console.log("nope")
-    }
+    if(ID.value == "user" && PW.value == "1234"){
+        sessionStorage.setItem("id", ID.value);
+        sessionStorage.setItem("pw", PW.value);
+        result.textContent  = "로그인 완료"
+        ID.value = "";
+        PW.value = "";
+       }
+       else{
+        alert("회원정보가 존재하지 않습니다.");
+       }
 })
+
+if(sessionStorage.getItem("id") && sessionStorage.getItem("pw")){
+    btnSignIn.style.display = "none";
+    btnProfile.style.display = "flex";
+}
