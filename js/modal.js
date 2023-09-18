@@ -7,7 +7,9 @@ let modaltext = document.querySelector(".modalBody_header_text");
 let modalSubmit = document.querySelector(".modalBody_form_submit");
 const modalContent = document.querySelector(".modalContent");
 let btnProfiles = document.querySelector(".profile");
+let btnProfilesImg = document.querySelector(".profileImgNav");
 
+//modalwrap로그인 & 아웃 모달
 function modalHandler(){
     modalWrap.style.display="flex";
 }
@@ -46,6 +48,7 @@ btnProfiles.addEventListener("click", function(){
     closeModal.classList.add("close_modal");
     closeModal.addEventListener("click", function(){
         profileModalWrap.style.display = "none"
+        location.reload();
     })
 
     const closeBtnImg = document.createElement("img")
@@ -63,7 +66,7 @@ btnProfiles.addEventListener("click", function(){
     // 이미지 생성
     const profilePic = document.createElement("img");
     profilePic.classList.add("modalBody_profile_pic");
-    profilePic.src = "./img/profilepic.jpg";
+    profilePic.src = "./img/profileDefaultBig.svg";
 
     // 폼생성
     const form = document.createElement("form");
@@ -77,16 +80,71 @@ btnProfiles.addEventListener("click", function(){
     logoutButton.addEventListener("click", () => {sessionStorage.clear();})
 
     // 프로필 사진 업로드 버튼
-    const uploadButton = document.createElement("input");
+    let uploadButton = document.createElement("input");
     uploadButton.classList.add("modalBody_editprofile_submit");
     uploadButton.type = "submit";
     uploadButton.value = "Upload Profile Photo";
+    
+    // 프로필 사진 업로드 버튼 이벤트
+    uploadButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log("업로드버튼 클릭");
+        filePick.click();
+    })
 
-    // 프로필 사진 삭제 버튼
-    const removeButton = document.createElement("input");
+    //프로필 사진 파일 선택창
+    let filePick = document.createElement("input");
+    filePick.setAttribute("type", "file")
+    filePick.setAttribute("style", "display: none;");
+    filePick.setAttribute("accept", "image/*"); 
+
+    //프로필 사진 파일 선택창 이벤트 //선택 파일 로컬스토리지 저장
+    filePick.addEventListener("change", (event) => {
+
+        event.preventDefault();
+        filePick.style.display = "flex";
+
+        const seletedFile = event.target.files[0];
+
+        //파일 선택창에서 선택한 파일이 존재할 경우
+        if(seletedFile){
+            const reader = new FileReader();
+    
+            //파일리더 객체에 로드 이벤트
+            reader.onload = function(e){
+                console.log(reader.result);
+                //프로필 img에 읽어온 데이터 src로 줘서 미리보기
+                profilePic.src = reader.result;
+                localStorage.setItem("pofilePic", reader.result);
+            }
+    
+            reader.readAsDataURL(seletedFile);
+        }else{
+            alert("이미지 파일을 선택해주세요");
+            picAreaFile.value = "";
+        }
+    })
+
+    //프로필 사진 등록 // global nav 프로필 이미지 로컬스토리지에서 가져오기
+    if(localStorage.getItem("pofilePic")){
+        let profileImg = localStorage.getItem("pofilePic");
+        profilePic.src = profileImg;
+    }
+
+    // 프로필 사진 삭제 버튼 //로컬스토리지에서 삭제
+    let removeButton = document.createElement("input");
     removeButton.classList.add("modalBody_editprofile_submit");
     removeButton.type = "submit";
     removeButton.value = "Remove Profile Photo";
+
+    removeButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        if(localStorage.getItem("pofilePic")){
+            localStorage.removeItem("pofilePic");
+            profilePic.src = "./img/profileDefaultBig.svg";
+            btnProfilesImg.src="img/profiledefault.svg";
+        }
+    })
 
     // 폼에다가 버튼 추가하기
     form.appendChild(logoutButton);
@@ -112,3 +170,9 @@ closeModal.addEventListener("click", closeModalHandler);
 goSignUP.addEventListener("click",singUpModal);
 goSignIn.addEventListener("click",singInModal);
 signinbtn.addEventListener("click", modalHandler);
+
+window.addEventListener("DOMContentLoaded", () => {
+    if(localStorage.getItem("pofilePic")){
+        btnProfilesImg.src = localStorage.getItem("pofilePic");
+    }
+})

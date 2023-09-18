@@ -71,15 +71,21 @@
     transform: scale(1.1);
 }
 .profile{
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
     border: none;
     display: none;
     align-items: center;
     justify-content: center;
-    padding-bottom: 6px;
+    overflow: hidden;
+    object-fit: fill;
 }
 .profile:hover{
     transform: scale(1.1);
+}
+.profileImgNav{
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
 }
