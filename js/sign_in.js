@@ -20,6 +20,7 @@ btnSubmit.addEventListener("click", () =>{
        }
 })
 
+//세션 스토리지에 회원 정보 저장되면, sign in 버튼에서 프로필 버튼으로 바꿈
 if(sessionStorage.getItem("id") && sessionStorage.getItem("pw")){
     btnSignIn.style.display = "none";
     btnProfile.style.display = "flex";

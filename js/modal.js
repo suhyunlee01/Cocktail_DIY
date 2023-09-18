@@ -34,8 +34,10 @@ function closeModalHandler(){
 }
 
 
-//프로필 모달로 바꿔주기
 
+
+//sign in 버튼은 display none -> 프로필 버튼이 display flex로 바뀐 후 클릭 이벤트
+//프로필 모달로 바꿔주기
 btnProfiles.addEventListener("click", function(){
     console.log("yes");
 
@@ -44,13 +46,14 @@ btnProfiles.addEventListener("click", function(){
     profileModalWrap.classList = "profileModalWrap";
     profileModalWrap.style.display="flex";
 
+    //닫기버튼 x버튼
     const closeModal = document.createElement("div");
     closeModal.classList.add("close_modal");
     closeModal.addEventListener("click", function(){
         profileModalWrap.style.display = "none"
         location.reload();
     })
-
+    //닫기버튼 x버튼 이미지
     const closeBtnImg = document.createElement("img")
     closeBtnImg.src = "./img/closePNG.png"
     closeModal.appendChild(closeBtnImg);
@@ -131,12 +134,13 @@ btnProfiles.addEventListener("click", function(){
         profilePic.src = profileImg;
     }
 
-    // 프로필 사진 삭제 버튼 //로컬스토리지에서 삭제
+    // 프로필 사진 삭제 버튼
     let removeButton = document.createElement("input");
     removeButton.classList.add("modalBody_editprofile_submit");
     removeButton.type = "submit";
     removeButton.value = "Remove Profile Photo";
 
+    //로컬스토리지에서 프로필 데이터 삭제
     removeButton.addEventListener("click", (event) => {
         event.preventDefault();
         if(localStorage.getItem("pofilePic")){
@@ -171,6 +175,7 @@ goSignUP.addEventListener("click",singUpModal);
 goSignIn.addEventListener("click",singInModal);
 signinbtn.addEventListener("click", modalHandler);
 
+//dom로드 시 프로필이미지를 로컬스토리지에서 가져옴
 window.addEventListener("DOMContentLoaded", () => {
     if(localStorage.getItem("pofilePic")){
         btnProfilesImg.src = localStorage.getItem("pofilePic");

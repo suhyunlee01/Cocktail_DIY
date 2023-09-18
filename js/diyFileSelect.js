@@ -58,7 +58,7 @@ btnUpload.addEventListener("click", () => {
         InputText: textValue
     };
 
-    // JSON 문자열로 만들가
+    // obj객체를 JSON 문자열로 만들기(시리얼라이제이션)
     localStorage.setItem(plusNum, JSON.stringify(obj));
 
     console.log("저장 완료");

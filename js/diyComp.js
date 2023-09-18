@@ -2,13 +2,16 @@ const saveZone = document.querySelector(".Diy_recipe_save_zone");
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log(localStorage.length);
+
+    //로컬 스토리지의 길이만큼 getitem 반복
     for(let i = 1; i<localStorage.length + 1; i++){
         let storedData = localStorage.getItem('myData' + i);
-
+        //만약 로컬스토리지에 데이터가 있다면
         if(storedData){
-
+            //json 파일 디시리얼라이제이션
             let parsedObj = JSON.parse(storedData);
 
+            //만약 디시리얼라이제이션한 파일이 있다면 동적으로 컴포넌트 생성
             if(parsedObj){
                 console.log("ok");
 
