@@ -69,9 +69,7 @@ function generate(drinks, length){
 function generateAlphabetModal(data, number){
     let thisDrink = data.drinks[number];
     RecipeModal.innerHTML = `
-    <svg class="close_recipe_modal" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-    <path d="M37.5 22.5L22.5 37.5M22.5 22.5L37.5 37.5M55 30C55 43.8071 43.8071 55 30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30Z" stroke="white" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+    <img class="close_recipe_modal" src="./img/closePNGWhite.png">
     <div class="recipe_modal">
         <div class="recipe_modal_header">
             <div class="recipe_modal_header_cont">
@@ -92,10 +90,7 @@ function generateAlphabetModal(data, number){
                 </div>
             </div>
             <div class="heart_svg">
-                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="58" height="58" rx="29" fill="#E4FFEC"/>
-                    <path d="M23.1667 18.5971C19.9455 18.5971 17.3334 21.1824 17.3334 24.3721C17.3334 26.9469 18.3542 33.0579 28.4027 39.2354C28.5827 39.345 28.7893 39.4029 29 39.4029C29.2107 39.4029 29.4174 39.345 29.5974 39.2354C39.6459 33.0579 40.6667 26.9469 40.6667 24.3721C40.6667 21.1824 38.0545 18.5971 34.8334 18.5971C31.6122 18.5971 29 22.0971 29 22.0971C29 22.0971 26.3879 18.5971 23.1667 18.5971Z" fill="#0D7D0B" stroke="#0D7D0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="./img/heartIMG.png" />
             </div>
         </div>
         <div class="recipe_modal_body">

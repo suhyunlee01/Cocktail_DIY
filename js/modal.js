@@ -92,6 +92,8 @@ btnProfiles.addEventListener("click", function(){
     uploadButton.addEventListener("click", (event) => {
         event.preventDefault();
         console.log("업로드버튼 클릭");
+
+        //업로드 버튼 누르면 프로필 파일 선택창 누른 것과 같음
         filePick.click();
     })
 
@@ -104,7 +106,10 @@ btnProfiles.addEventListener("click", function(){
     //프로필 사진 파일 선택창 이벤트 //선택 파일 로컬스토리지 저장
     filePick.addEventListener("change", (event) => {
 
+        //input type file 특성상 제출하는 특성이 있어서
+        //모달창을 자꾸 종료시킴...해당 동작을 preventDefault로 막음
         event.preventDefault();
+
         filePick.style.display = "flex";
 
         const seletedFile = event.target.files[0];
