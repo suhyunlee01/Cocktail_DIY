@@ -362,8 +362,6 @@ button{
     padding-bottom: 60px;
 }
 .banner_content_img_src{
-    transition: opacity 0.5s ease; /* fade in 효과 주기위한 트랜지션임 */
-    opacity: 0;
     width: 517px;
     height: 398px;
     flex-shrink: 0;
@@ -536,3 +534,31 @@ button{
 .heart_svg:hover{
     cursor: grab;
 } 
+
+/* 왼 - 오*/
+
+.hidden{
+    opacity: 1;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0); 
+}
+
+/*아래 - 위*/
+
+.hidden2{
+    opacity: 1;
+    filter: blur(5px);
+    transform: translateY(-150%);
+    transition: all 1s;
+}
+.show2{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0); 
+}
