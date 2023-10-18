@@ -2,13 +2,7 @@ let url = "https://thecocktaildb.com/api/json/v1/1/search.php?f="
 let RecipeModal = document.querySelector(".recipe_modal_wrap");
 let buttons = [];
 let MainpageRecipeContainers = [];
-let res = [];
-for(let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]){
-    res[number] = document.getElementById("res"+ number);
-    res[number].addEventListener("click", function(){
-        RecipeModal.style.display = "flex";
-    })
-}
+let container = document.querySelector(".see_all_recipe_container");
 
 
 //알파벳 버튼 가져오기
@@ -35,19 +29,14 @@ function fetching(alphabet){
         let drinks = data.drinks;
         let length = drinks.length;
         
-        //알파벳별로 result 영역에 출력하는 함수 호출
+        //레시피 엘리먼트 동적으로 생성하는 함수
         generate(drinks, length);
-        
-        //클릭 이벤트 발생 시 모달창 프린트
-        for(let number of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]){
-            res[number].addEventListener("click", function(){generateAlphabetModal(data, number)})
-        }
     })
 }
 
 //클릭 이벤트 발생 시 모달창 프린트하는 함수
-function generateAlphabetModal(data, number){
-    let thisDrink = data.drinks[number];
+function generateModal(drinks, number){
+    let thisDrink = drinks[number];
     RecipeModal.innerHTML = `
     <svg class="close_recipe_modal" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
     <path d="M37.5 22.5L22.5 37.5M22.5 22.5L37.5 37.5M55 30C55 43.8071 43.8071 55 30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30Z" stroke="white" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
@@ -102,6 +91,7 @@ function generateAlphabetModal(data, number){
     generateingredient(thisDrink);
 }
 
+
 //재료 null 처리 함수
 function generateingredient(thisDrink) {
     console.log("Data in generateingredient:", thisDrink);
@@ -123,42 +113,78 @@ function generateingredient(thisDrink) {
     document.querySelector(".ingredients").innerHTML = ingredientsList;
 }
 
-//알파벳별로 result 영역에 출력하는 함수
-function generate(drinks, length){
-    for(let j = 0; j < length; j++){
 
-        res[j].innerHTML= ` 
-        <div class="recipe_img_container">
-            <div class="recipe_img_container_component">
-                <img class="recipe_img_container_component_img" src="${drinks[j].strDrinkThumb}"/>
-                <div class="recipe_img_container_component_text_container">
-                    <div class="recipe_text_box">
-                        <span class="recipe_name">${drinks[j].strDrink}</span>
-                        <span class="Glass_to_use">${drinks[j].strGlass}</span>
-                        <div class="recipe_img_container_component_text_container_tag">
-                            <span class="tag">
-                                ${drinks[j].strIngredient1}
-                            </span>
-                        </div>
+//레시피 엘리먼트 동적으로 생성하는 함수
+function generate(drinks, length) {
+    container.innerHTML = '';
+    for (let j = 0; j < length; j++) {
+
+        const innerContainer = document.createElement("div");
+        innerContainer.classList.add(`recipe_img_container_component${j}`);
+        innerContainer.innerHTML = `
+            <img class="recipe_img_container_component_img" src="${drinks[j].strDrinkThumb}"/>
+            <div class="recipe_img_container_component_text_container">
+                <div class="recipe_text_box">
+                    <span class="recipe_name">${drinks[j].strDrink}</span>
+                    <span class="Glass_to_use">${drinks[j].strGlass}</span>
+                    <div class="recipe_img_container_component_text_container_tag">
+                        <span class="tag">
+                            ${drinks[j].strIngredient1}
+                        </span>
                     </div>
                 </div>
             </div>
-        </div>
-        `
+        `;
+
+        innerContainer.addEventListener("click", function() {
+            generateModal(drinks, j);
+            RecipeModal.style.display = "flex";
+            console.log(`Clicked on element ${j}`);
+        });
+
+        container.appendChild(innerContainer);
+        document.body.appendChild(container); // 혹은 요소를 추가할 부모 요소를 지정하세요.
+    }
 }
+
+
+function generateFooter() {
+    const footer = `
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_content_left">
+                    <span>Cocktail DIY</span>
+                    <span>Cocktail DIY Made By SuHyun Lee</span>
+                </div>
+                <div class="footer_content_right">
+                    <a href="https://github.com/suhyunlee01/Cocktail_DIY">
+                        <button>
+                            <img src="./img/contactMeBtn.svg"/>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="bottom_line">
+                <hr/>
+            </div>
+        </div>
+    `;
+
+    document.querySelector('.footer_container').innerHTML = footer;
 }
 
 
 //다른 알파벳 버튼 눌렀을 때 html리셋
 function reset() {
     for (let j = 0; j < res.length; j++) {
-        res[j].innerHTML = " ";
+        container.innerHTML = " ";
     }
 }
 
 
 //윈도우 처음 로드 시 알파벳 a 리스트 먼저 보여주기
-window.addEventListener("load", function(){alphabet="a"; fetching(alphabet); reset();});
+window.addEventListener("load", function(){
+    alphabet="a"; fetching(alphabet); reset();});
 
 //모달창 닫기
 document.addEventListener("click", function(event) {

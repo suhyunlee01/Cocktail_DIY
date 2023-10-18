@@ -17,6 +17,7 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
 }
 a{
     text-decoration: none;
@@ -462,6 +463,7 @@ button{
     gap: 32px;
 }
 .heart_header_text{
+    width: 100%;
     margin-top: 200px;
     margin-bottom: 40px;
     font-family: Montserrat;
@@ -486,6 +488,11 @@ button{
 }
 
 /*seeall*/
+.seeAllBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #alphabet_btn{
     width: 100%;
     display: flex;
@@ -507,14 +514,21 @@ button{
 #alphabet_btn button:hover{
     background-color: #bcfdcf;
 }
-.see_all_recipe_container{
-    display: flex;
-    justify-content: space-between;
+.see_all_recipe_container {
+    display: grid;
+    align-items: center; /* 세로 정렬을 가운데로 조정합니다 */
+    justify-items: center; /* 가로 정렬을 가운데로 조정합니다 */
+    /* 각 요소의 최소 너비는 285px이고, 가능한한 여유 공간을 균등하게 분배합니다 */
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    grid-gap: 100px; /* 요소들 간의 간격을 조절합니다 */
     align-items: start;
+    max-width: 1440px;
+    padding-bottom: 100px;
 }
 .see_all_recipe_container div:hover{
     cursor: grab;
 }
+
 
 /**/
 .recipe_modal_wrap_random{
