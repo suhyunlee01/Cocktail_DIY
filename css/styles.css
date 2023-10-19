@@ -348,7 +348,7 @@ button{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 100px;
     margin-bottom: 100px;
     animation: resizeAnimation 2s infinite; /* 2초 간격으로 애니메이션 반복 */
 }

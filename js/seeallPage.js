@@ -1,4 +1,4 @@
-import { fetching } from "./fetching.js";
+import { fetching } from "./Alphabetfetching.js";
 let buttons = [];
 //알파벳 초기값
 let alphabet = "a";
@@ -17,5 +17,9 @@ for(let alp of "ABCDEFGHIJKLMNOPQRSTUVWXYZ"){
 
 //윈도우 처음 로드 시 알파벳 a 리스트 먼저 보여주기
 window.addEventListener("load", function(){
-    let insertNum = "3";
-    fetching(url, alphabet);});
+
+    //insertNum 이 있는 경우에만 drinks 배열 길이를 제한할 수 있게 함
+    //이 경우에는 inserNum이 비어있기에 fetching 메서드에서 배열 그대로 출력하게 로직 구현함.
+    let insertNum;
+    fetching(url, alphabet, insertNum);
+});
