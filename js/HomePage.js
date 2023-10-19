@@ -1,12 +1,13 @@
 import { fetching } from "./fetching.js";
 
-let url = "https://thecocktaildb.com/api/json/v1/1/search.php?f=a"
+let url = "https://thecocktaildb.com/api/json/v1/1/search.php?f="
 let RecipeModal = document.querySelector(".recipe_modal_wrap");
 let alphabet = "a";
 let MainpageRecipeContainers = [];
 
 window.addEventListener("load", function(){
-    fetching(alphabet);});
+    fetching(url, alphabet);});
+
 
 //모달창 닫기
 document.addEventListener("click", function(event) {

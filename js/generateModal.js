@@ -4,6 +4,7 @@ let RecipeModal = document.querySelector(".recipe_modal_wrap");
 //클릭 이벤트 발생 시 모달창 프린트하는 함수
 export function generateModal(drinks, number){
     let thisDrink = drinks[number];
+    console.log("현재 음료", thisDrink);
     RecipeModal.innerHTML = `
     <svg class="close_recipe_modal" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
     <path d="M37.5 22.5L22.5 37.5M22.5 22.5L37.5 37.5M55 30C55 43.8071 43.8071 55 30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30Z" stroke="white" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>

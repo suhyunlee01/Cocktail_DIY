@@ -1,8 +1,8 @@
 import { generateRecipComp } from "./generateRecipeComp.js";
 
-let url = "https://thecocktaildb.com/api/json/v1/1/search.php?f="
-export function fetching(alphabet){
-    fetch(url+alphabet).then((response)=>response.json()).then((data)=>{
+export function fetching(url, alphabet){
+    fetch(url + alphabet).then((response)=>response.json())
+    .then((data)=>{
         console.log(data);
         let drinks = data.drinks;
         let length = drinks.length;
