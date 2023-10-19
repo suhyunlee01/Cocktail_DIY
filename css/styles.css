@@ -19,6 +19,9 @@ body, html {
     width: 100%;
     height: 100%;
 }
+body{
+    overflow-x: hidden;
+}
 a{
     text-decoration: none;
     cursor:grab;
@@ -38,6 +41,7 @@ button{
 }
 .container {
     width: 100%; 
+    height: auto;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -220,44 +224,56 @@ button{
 .scrolling{
     height: 30px;
 }
-.mainpage_img_container{
-    width: 100%;
+.mainpage_img_container {
+    position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-.mainpage_img_container > img{
-    margin-top: 100px;
+.mainpage_img_container > img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(60%);
 }
-.mainpage_img_container_contents{
-    min-width: 1440px;
+
+.mainpage_img_container_contents {
+    width: 1440px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
     color: #FFF;
     font-family: Pretendard;
-    position: absolute;
-    top: 35%;
 }
-.mainpage_img_container_contents_text_big{
+
+.mainpage_img_container_contents_text_big {
     font-size: 72px;
     font-weight: 700;
     margin-bottom: 50px;
 }
-.mainpage_img_container_contents_text_small{
+
+.mainpage_img_container_contents_text_small {
     font-size: 18px;
     font-weight: 200;
     margin-bottom: 70px;
     display: block;
 }
-.mainpage_img_container_contents_text_big div{
+
+.mainpage_img_container_contents_text_big div {
     margin-bottom: 4px;
 }
-.mainpage_img_container_contents_text_small div{
+
+.mainpage_img_container_contents_text_small div {
     margin-bottom: 6px;
 }
-.mainpage_img_container_contents_search{
+
+.mainpage_img_container_contents_search {
     width: 100%;
     height: 60px;
     border-radius: 5px;
@@ -271,10 +287,12 @@ button{
     align-items: center;
     padding-left: 24px;
 }
-.mainpage_img_container_contents_search:hover{
+
+.mainpage_img_container_contents_search:hover {
     background-color: rgba(255, 255, 255, 0.658);
 }
-.mainpage_img_container_contents_search svg{
+
+.mainpage_img_container_contents_search svg {
     margin-right: 20px;
 }
 
@@ -313,17 +331,32 @@ button{
     align-items: center;
     justify-content: space-between;
 }
-.see_more{
+
+@keyframes resizeAnimation {
+    0% {
+        transform: scale(1); /* 원래 크기 */
+    }
+    50% {
+        transform: scale(1.4); /* 1.2배 크기로 확대 */
+    }
+    100% {
+        transform: scale(1); /* 다시 원래 크기로 축소 */
+    }
+}
+
+.see_more {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    transition: transform 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    animation: resizeAnimation 2s infinite; /* 2초 간격으로 애니메이션 반복 */
 }
+
 .see_more:hover{
-    transform: scale(1.2);
     cursor: grab;
 }
+
 .HOME_DIY_header_text{
     width: 100%;
     display: flex;
@@ -373,11 +406,11 @@ button{
     font-weight: 700;
 }
 .the_6_popular{
+    width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
 }
 .popular_content{
-    margin-right: 336px;
 }
 .My-Diy{
     margin-top: 200px;
@@ -523,12 +556,17 @@ button{
     grid-gap: 100px; /* 요소들 간의 간격을 조절합니다 */
     align-items: start;
     max-width: 1440px;
-    padding-bottom: 100px;
+}
+.see_all_recipe_container div{
+    transition: transform 0.3s ease;
 }
 .see_all_recipe_container div:hover{
     cursor: grab;
+    transform: scale(1.1);
 }
-
+.seeall_container{
+    padding-bottom: 160px;
+}
 
 /**/
 .recipe_modal_wrap_random{
@@ -553,8 +591,8 @@ button{
 
 .hidden{
     opacity: 1;
-    filter: blur(5px);
-    transform: translateX(-100%);
+    filter: blur(2px);
+    transform: translateX(-50%);
     transition: all 1s;
 }
 .show{

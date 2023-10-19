@@ -15,8 +15,8 @@ function bannerAnimate(imgContainer) {
                 //안보이면 다시 show 클래스 제거
                 imgContainer.classList.remove('show');
             }
-        })
-    })
+        });
+    });
     observer.observe(imgContainer);
 }
 
@@ -33,7 +33,7 @@ function bannerTextAnimate(bannerText){
                 bannerText.classList.remove('show2');
             }
         })
-    })
+    });
     observer.observe(bannerText);
 }
 

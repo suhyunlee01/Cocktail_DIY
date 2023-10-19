@@ -1,16 +1,4 @@
 
-.recipe_img_container_component{
-    width: 285px;
-    height: 446px;
-    justify-content: flex-start;
-    flex-direction: column;
-    background-color: #fafafa;
-    margin-bottom: 60px;
-    transition: transform 0.3s ease;
-}
-.recipe_img_container_component:hover{
-    transform: scale(1.1);
-}
 .recipe_img_container_component_img{
     width: 285px;
     height: 301px;

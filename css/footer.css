@@ -1,7 +1,8 @@
 .footer{
+    width: 100vw;
     margin-top: 140px;
     background-color: #434343;
-    width: 100%;
+
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,7 @@
     border: none;
 }
 .bottom_line{
-    margin-top: 34px;
     width: 1440px;
+    margin-top: 34px;
     height: 1px;
 }
