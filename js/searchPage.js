@@ -19,7 +19,7 @@ function getresult(){
     if(userInput.length===0){
         //검색어가 비어있으면 출력되었던 결과 지우기
         container.innerHTML = '';
-    }else if(/[^a-zA-Z]/.test(userInput)){
+    }else if( /[^a-zA-Z\s]/.test(userInput)){
         //영어로 검색이 되지 않았을 때 alert
         alert("영어로 된 검색어를 한 글자 이상 입력해주세요.😊");
     }else{
