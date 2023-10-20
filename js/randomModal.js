@@ -1,4 +1,4 @@
-import { RandomFetching } from "./keyWordFetching.js";
+import { RandomFetching } from "./randomFetching.js";
 let RecipeModal = document.querySelector(".recipe_modal_wrap");
 //윈도우 로드 시 바로 화면에 출력
 let Url = "https://thecocktaildb.com/api/json/v1/1/random.php";

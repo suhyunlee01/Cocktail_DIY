@@ -21,10 +21,10 @@
     background-color: white;
     border-radius: 20px;
     width: 1100px;
-    height: 700px;
+    height: 714px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 50px 90px 50px 90px;
 
 }
@@ -34,6 +34,7 @@
     align-items: center;
 }
 .recipe_modal_body{
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -45,7 +46,7 @@
 .recipe_modal_header_cont img{
     background-color: antiquewhite;
     width: 240px;
-    height: 300px;
+    height: 290px;
     object-fit: cover;
 }
 .recipe_modal_header_txt{

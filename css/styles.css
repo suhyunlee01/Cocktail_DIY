@@ -569,6 +569,21 @@ button{
 }
 
 /**/
+.recommandTXTContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recommandTXT{
+    font-family: pretendard;
+    background-color: #33854c;
+    color: white;
+    width: 335px;
+    padding: 14px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    border-radius: 10px;
+}
 .recipe_modal_wrap_random{
     display: flex;
     position: fixed;
