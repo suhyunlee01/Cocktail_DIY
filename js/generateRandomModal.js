@@ -10,7 +10,8 @@ export function generateRandomModal(drinks, number){
     <path d="M37.5 22.5L22.5 37.5M22.5 22.5L37.5 37.5M55 30C55 43.8071 43.8071 55 30 55C16.1929 55 5 43.8071 5 30C5 16.1929 16.1929 5 30 5C43.8071 5 55 16.1929 55 30Z" stroke="white" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <div class="recipe_modal">
-        <div class="recommandTXTContainer"><span class="recommandTXT">🍸랜덤한 추천 칵테일로 선택의 폭을 넓혀보세요.🍸</span></div>
+        <div class="recommandTXTContainer"><span class="recommandTXT">🍸페이지를 새로고침 할 때마다 랜덤하게 새로운 칵테일을 추천해드려요!🍸</span>
+        </div>
         <div class="recipe_modal_header">
             <div class="recipe_modal_header_cont">
                 <img src="${thisDrink.strDrinkThumb}"/>

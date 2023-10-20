@@ -216,6 +216,16 @@ button{
     border-radius: 40px;
     border: none ;
 }
+.TestIDPW{
+    font-family: pretendard;
+    color: #0a7008;
+    margin-bottom: 28px;
+    border-radius: 10px;
+    background-color: #e7ffee;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
   /*mainpage*/
 
 .scroll{
@@ -573,16 +583,17 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    margin-bottom: 24px;
 }
 .recommandTXT{
-    font-family: pretendard;
-    background-color: #33854c;
-    color: white;
-    width: 335px;
-    padding: 14px;
-    margin-bottom: 24px;
-    margin-top: 0;
     border-radius: 10px;
+    padding: 14px;
+    background-color: #ff6701;
+    font-family: pretendard;
+    color: white;
+    width: 480px;
+    margin-top: 0;
 }
 .recipe_modal_wrap_random{
     display: flex;
