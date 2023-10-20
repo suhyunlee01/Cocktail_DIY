@@ -13,9 +13,9 @@ export function fetching(url, alphabet, insertNum){
         //insertNum으로 보낸 수 만큼만 drinks 배열 보여주게 하기
         //insertNum이 비어있는 경우엔 drinks의 전체 길이 그대로 출력함
         if(insertNum){
-            generateRecipComp(drinks.slice(0, insertNum), length, insertNum);
+            generateRecipComp(drinks.slice(0, insertNum), length);
         }else{
-            generateRecipComp(drinks, length, insertNum)
+            generateRecipComp(drinks, length);
         }
     })
 }

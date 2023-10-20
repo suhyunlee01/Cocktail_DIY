@@ -2,9 +2,6 @@ let RecipeModal = document.querySelector(".recipe_modal_wrap_random");
 
 
 //클릭 이벤트 발생 시 랜덤한 모달을 출력하는 함수이다.
-//index.html이 로드되자마자 랜덤 모달은 display:flex인 상태여야 하는데,
-//기존 모달들까지 display:flex 스타일을 줄 수 없는 상황이라서
-//recipe_modal_wrap과 recipe_modal_wrap_random로 컨테이너 분리함
 export function generateRandomModal(drinks, number){
     let thisDrink = drinks[number];
     console.log("현재 음료", thisDrink);

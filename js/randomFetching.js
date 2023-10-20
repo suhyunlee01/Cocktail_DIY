@@ -1,7 +1,7 @@
 import { generateRandomModal } from "./generateRandomModal.js";
 
-export function RandomFetching (url, keyword){
-    fetch(url+keyword).then((responese)=> responese.json()).then((data)=>{
+export function RandomFetching (url){
+    fetch(url).then((responese)=> responese.json()).then((data)=>{
         let drinks = data.drinks;
         let length = 0;
 
