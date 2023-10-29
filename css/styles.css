@@ -324,6 +324,7 @@ button{
     position: relative;
     height: 100vh;
     overflow: hidden;
+    width: 100%;
 }
 
 .mainpage_img_container > img {
@@ -395,6 +396,7 @@ button{
 
 @media screen and (max-width: 768px) {
     .mainpage_img_container{
+        width: 100%;
         margin-top: 80px;
         height: 50vh;
     }
@@ -415,7 +417,13 @@ button{
     }
 }
 
-
+@media screen and (max-width: 420px){
+    .mainpage_img_container{
+        width: 100%;
+        margin-top: 8cqmax;
+        height: 50vh;
+    }
+}
 
 
 
