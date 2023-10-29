@@ -226,6 +226,92 @@ button{
     padding-left: 20px;
     padding-right: 20px;
 }
+
+
+/* 화면 너비가 768px 이하일 때 반응형 */
+@media screen and (max-width: 768px) {
+    .modalWrap{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    #modalContent,
+    #modalBody{
+        height: auto;
+        width: 80%;
+        padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modalBody_signup_signin{
+        display: flex;
+        width: 100%;
+    }
+    .modalBody_form,
+    .modalBody_signup_signin div,
+    .modalBody_form_input,
+    .modalBody_profile_pic{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .modalBody_signup_signin,
+    .modalBody_signin_signuppage,
+    .modalBody_signup_signuppage{
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .modalBody_editprofile_submit_logout,
+    .modalBody_form_submit,
+    .modalBody_editprofile_submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%; /* 화면 너비의 80%로 설정 */
+        max-width: 200px; /* 최대 너비 설정 */
+        margin: 0 auto;
+        margin-top: 12px;
+    }
+
+    .modalBody_header_text,
+    .modalBody_header_text_or,
+    .modalBody_google,
+    .modalBody_form label {
+        margin-top: 12px;
+    }
+
+    .modalBody_signup_signin div {
+        height: 40px;
+    }
+    .modalBody_form_input,
+    .modalBody_form_submit,
+    .modalBody_editprofile_submit,
+    .modalBody_editprofile_submit_logout {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .modalBody_header_text_or {
+        margin-bottom: 20px;
+    }
+    .modalBody_profile_pic {
+        width: 200px; /* 프로필 사진 크기 조정 */
+        height: 200px; /* 프로필 사진 크기 조정 */
+        margin-bottom: 40px;
+    }
+}
+
+
+
   /*mainpage*/
 
 .scroll{
@@ -306,6 +392,34 @@ button{
     margin-right: 20px;
 }
 
+
+@media screen and (max-width: 768px) {
+    .mainpage_img_container{
+        margin-top: 80px;
+        height: 50vh;
+    }
+    .mainpage_img_container_contents_text_big {
+        margin-left: 12px;
+        font-size: 50px;
+    }
+
+    .mainpage_img_container_contents_text_small {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+
+    .mainpage_img_container_contents_search {
+        margin-left: 12px;
+        font-size: 14px;
+        width: 94%;
+    }
+}
+
+
+
+
+
+/**/
 .recipe_header_text{
     display: flex;
     justify-content: space-between;
@@ -410,18 +524,7 @@ button{
     height: 398px;
     flex-shrink: 0;
 }
-.header_the_6_popular{
-    font-family: Montserrat;
-    font-size: 34px;
-    font-weight: 700;
-}
-.the_6_popular{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.popular_content{
-}
+
 .My-Diy{
     margin-top: 200px;
 }
@@ -538,8 +641,9 @@ button{
 }
 #alphabet_btn{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    /* 최소 58px로 */
+    grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
     position: relative;
     top: 170px;
 }
@@ -578,40 +682,7 @@ button{
     padding-bottom: 160px;
 }
 
-/**/
-.recommandTXTContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 24px;
-}
-.recommandTXT{
-    border-radius: 10px;
-    padding: 14px;
-    background-color: #ff6701;
-    font-family: pretendard;
-    color: white;
-    width: 480px;
-    margin-top: 0;
-}
-.recipe_modal_wrap_random{
-    display: flex;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    z-index: 100;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.50);
-}
-.heart_svg:hover{
-    cursor: grab;
-} 
+
 
 /* 왼 - 오*/
 

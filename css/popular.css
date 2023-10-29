@@ -1,3 +1,14 @@
+.header_the_6_popular{
+    font-family: Montserrat;
+    font-size: 34px;
+    font-weight: 700;
+}
+.the_6_popular{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .popular_content_component{
     display: flex;
     justify-content: center;
@@ -12,4 +23,26 @@
     width: 120px;
     height: 120px;
     object-fit: cover;
+}
+
+/* 반응형 스타일 */
+
+@media screen and (max-width: 768px) {
+    .the_6_popular {
+        flex-direction: column; /* 세로 방향으로 배치 */ /* 가운데 정렬 */
+        align-items: center;
+    }
+
+    .popular_content_component {
+        width: 80%; /* 화면 너비의 80%로 설정 */ /* 마진 바텀을 더 크게 설정함 */
+        margin-bottom: 20px;
+    }
+}
+
+/* 화면 너비가 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+    .popular_content_component {
+        width: 90%; /* 화면 너비의 90%로 설정 *//* 마진 바텀을 더 크게 설정함 */
+        margin-bottom: 30px;
+    }
 }

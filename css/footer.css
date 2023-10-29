@@ -2,7 +2,6 @@
     width: 100vw;
     margin-top: 140px;
     background-color: #434343;
-
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -12,7 +11,7 @@
     bottom: 0;
 }
 .footer_content{
-    width: 1440px;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +34,13 @@
     border: none;
 }
 .bottom_line{
-    width: 1440px;
+    width: 80%;
     margin-top: 34px;
     height: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        width: 100%;
+    }
 }
