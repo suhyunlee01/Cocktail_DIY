@@ -14,7 +14,7 @@ export function generateRandomModal(drinks, number){
         </div>
         <div class="recipe_modal_header">
             <div class="recipe_modal_header_cont">
-                <img src="${thisDrink.strDrinkThumb}"/>
+                <img class="recipe_modal_img" src="${thisDrink.strDrinkThumb}"/>
                 <div class="recipe_modal_header_txt">
                     <div class="recipe_text_box">
                         <span class="recipe_modal_body_header">${thisDrink.strDrink}</span>
