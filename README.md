@@ -2,6 +2,8 @@
 전세계 모든 칵테일 레시피를 위한 프로젝트
 
 [Cocktail_DIY 노션 페이지 바로가기](https://jewel-woodpecker-781.notion.site/DIY-ebc256e5c43d41d29e80b367d0eab636)
+
+
 [서비스 이용해보기](https://suhyunlee01.github.io/Cocktail_DIY/)
 
 ### 작업 기간
