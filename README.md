@@ -1,7 +1,7 @@
 # Cocktail_DIY
 전세계 모든 칵테일 레시피를 위한 프로젝트
 
-[노션 페이지 바로가기](https://www.notion.so/DIY-ebc256e5c43d41d29e80b367d0eab636)
+[노션 페이지 바로가기](https://jewel-woodpecker-781.notion.site/DIY-ebc256e5c43d41d29e80b367d0eab636)
 [서비스 이용해보기](https://suhyunlee01.github.io/Cocktail_DIY/)
 
 ### 작업 기간
@@ -51,4 +51,4 @@
 
 ### 개발 기록과 학습 과정 기록
 
-[프로젝트 개발과 학습 기록 바로가기](https://jewel-woodpecker-781.notion.site/Javascript_FrontEnd-60bd96eb58404e1fae56d6479b256a41?pvs=21)
+[프로젝트 개발과 학습 기록 바로가기](https://jewel-woodpecker-781.notion.site/DIY-ebc256e5c43d41d29e80b367d0eab636)
